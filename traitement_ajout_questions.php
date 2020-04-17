@@ -11,7 +11,6 @@
 	  $nbQuestion = $_POST['nbQuestion'];
 	  $niveau = $_POST ['niveau'];
 	  $categorie = $_POST ['categorie'];
-
 	  
 	  $NvxNumQuestionnaire = AjouterQuestionnaire ($nbQuestion,$categorie,$niveau);
 
@@ -19,7 +18,6 @@
 	  {
 	  	for ($i=1; $i<=$nbQuestion;$i++)
 	  	{
-	  	    require "fonctions/fonctions.php";
 	  		$question = $_POST['question'.$i];
 	  		$reponse1 = $_POST['reponse1'.$i];
 	  		$reponse2 = $_POST['reponse2'.$i];
@@ -37,7 +35,6 @@
 	  {
 	  	for ($i=1; $i<=$nbQuestion;$i++)
 	  	{
-	  	    require "fonctions/fonctions.php";
 	  		$question = $_POST['question'.$i];
 	  		$reponse1 = $_POST['reponse1'.$i];
 	  		$reponse2 = $_POST['reponse2'.$i];
@@ -61,20 +58,16 @@
 	  {
 	  	for ($i=1; $i<=$nbQuestion;$i++)
 	  	{
-	  	    require "fonctions/fonctions.php";
 	  		$question = $_POST['question'.$i];
 	  		$reponse = $_POST['reponse'.$i];
-
-	  		echo $question;
-	  		echo $reponse;
-
 	  		$NvxNumQuestion = AjouterQuestion ($question,$categorie,$niveau);
 	  		AjouterReponse ($reponse,'V',$NvxNumQuestion);
 	  		ModifCompose ($NvxNumQuestion,$NvxNumQuestionnaire);
 	  	}
 	  }
 	
-	  echo '<div id="container">Bravo ! Votre questionnaire a été enregistré </div>';
+	echo '<div class = "container"><div class="alert alert-success" role="alert"> Bravo ! Votre questionnaire a été enregistré </div></div>';
+	  
 	?>
 
 </body>

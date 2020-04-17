@@ -59,6 +59,7 @@
       else
       {
         echo '</ul><ul class="navbar-nav ml-auto">';
+        echo '<li class="nav-item active"><a class="nav-link" href="https://www.youtube.com/watch?v=RD_CplScEII"><font color = "#0CD4B9 ">Tutoriel </font><span class="sr-only"></span></a></li>';
         echo '<li class="nav-item active"><a class="nav-link" href="inscription.php">Inscription<span class="sr-only"></span></a></li>';
         echo '<li class="nav-item active"><a class="nav-link" href="connexion_utilisateur.php">Connexion<span class="sr-only"></span></a></li>';
         echo '</ul>';

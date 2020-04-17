@@ -2,6 +2,7 @@
 	  require "bdd/connect.php";
       require "fonctions/fonctions.php";
       
+      
 	  
     if (empty($_POST["login"]) OR empty($_POST["password"])) 
     {
@@ -28,9 +29,12 @@
         }
         else 
         {
+            require_once "fonctions/head.php";
+      require_once "fonctions/header.php";
         $error = "Utilisateur ou mot de passe non reconnu";
+        echo '</br>';
         echo '<div class = "container"><div class="alert alert-danger" role="alert"> Utilisateur ou mot de passe non reconnu </div></div>';
-        echo '<div class="container"><div class="button_inscription"><a href="connexion_utilisateur.php" class="btn btn-secondary btn-lg m-*-auto">Réessayer ? </a></div></div>';
+        echo '<div class="container"><div class="button_inscription"><a href="connexion_utilisateur.php" class="btn btn-secondary btn-lg m-*-auto">Réessayer</a></div></div>';
         }
     }
 	  

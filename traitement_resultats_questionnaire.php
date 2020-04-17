@@ -95,7 +95,8 @@ require "bdd/connect.php";
 				WHERE COMPOSE.N_questionnaire = QUESTIONNAIRE.N_questionnaire
 				AND COMPOSE.N_question = QUESTIONS.N_question
 				AND REPONSES.N_question = QUESTIONS.N_question
-				AND QUESTIONNAIRE.N_questionnaire = '$nQuestionnaire' ";
+				AND QUESTIONNAIRE.N_questionnaire = '$nQuestionnaire' 
+				AND QUESTIONS.N_question = '$key'";
 				$MaLigne = $BDD -> query ($MaRequete);
 				$TabReponseRequete = $MaLigne -> fetchAll ();
 

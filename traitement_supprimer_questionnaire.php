@@ -16,7 +16,7 @@
           $MaRequete = "DELETE FROM QUESTIONNAIRE WHERE N_questionnaire = '$N_questionnaire'";
           $MaLigne = $BDD -> query ($MaRequete);
 
-          echo '<div id="container">Bravo ! Votre questionnaire a été supprimé </div>';
+          echo '<div class = "container"><div class="alert alert-success" role="alert"> ravo ! Votre questionnaire a été supprimé </div></div>';
 
           ?>
         
